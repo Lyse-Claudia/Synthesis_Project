@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout | Burundi Events</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <a class="logo" href="index.html">Burundi <span>Events</span></a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Discover</a
+        ><a href="add-event.html" data-member-link hidden>Add event</a
+        ><a href="tickets.html">My tickets</a><a href="account.html">Account</a>
+      </nav>
+    </header>
+    <main class="container narrow" id="main-content">
+      <a class="back-link" href="index.html">← Back to events</a>
+      <section class="page-heading">
+        <p class="eyebrow">RESERVE YOUR PLACE</p>
+        <h1>Checkout</h1>
+        <p>Review your ticket and enter your details.</p>
+      </section>
+      <div id="checkoutContent">
+        <section class="panel order-card">
+          <p class="eyebrow">YOUR EVENT</p>
+          <h2 id="checkoutTitle">Select an event</h2>
+          <p class="muted" id="checkoutMeta"></p>
+          <label for="ticketType">Ticket type</label
+          ><select id="ticketType" form="bookingForm" required></select>
+          <p class="muted" id="ticketHint" aria-live="polite"></p>
+          <label for="ticketQuantity">Number of tickets</label
+          ><input
+            id="ticketQuantity"
+            form="bookingForm"
+            type="number"
+            min="1"
+            max="10"
+            step="1"
+            value="1"
+            required
+          />
+          <div class="total">
+            <span>Total</span><strong id="ticketPrice" aria-live="polite"></strong>
+          </div>
+        </section>
+        <form class="panel booking-form" id="bookingForm">
+          <p class="eyebrow">BOOKING DETAILS</p>
+          <p class="muted">Using your name and email from your account.</p>
+          <label for="customerName">Full name</label
+          ><input
+            id="customerName"
+            required
+            minlength="2"
+            placeholder="Enter your name"
+          />
+          <label for="customerEmail">Email address</label
+          ><input
+            id="customerEmail"
+            type="email"
+            required
+            placeholder="name@example.com"
+          />
+          <button class="button" id="bookingSubmit" type="submit">
+            Confirm booking
+          </button>
+        </form>
+      </div>
+      <div class="panel success-message" id="bookingSuccess" role="status" aria-live="polite" hidden></div>
+    </main>
+    <footer>
+      Burundi Events <span>Find something happening near you.</span>
+    </footer>
+  </body>
+</html>

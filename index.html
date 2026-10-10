@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Burundi Events | Find something happening</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <a class="logo" href="index.html">Burundi <span>Events</span></a>
+      <nav aria-label="Main navigation">
+        <a class="active" aria-current="page" href="index.html">Discover</a
+        ><a href="add-event.html" data-member-link hidden>Add event</a
+        ><a href="tickets.html">My tickets</a><a href="account.html">Account</a>
+      </nav>
+    </header>
+    <main class="container" id="main-content">
+      <section class="intro">
+        <p class="eyebrow">YOUR GUIDE TO WHAT'S ON</p>
+        <h1>Find your next<br /><span>great experience.</span></h1>
+        <p>
+          Discover music, culture, sport and community events happening around
+          Burundi.
+        </p>
+      </section>
+      <section class="event-section">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">UPCOMING IN BURUNDI</p>
+            <h2>Explore events</h2>
+          </div>
+          <p class="muted">Choose an event to see ticket options.</p>
+        </div>
+        <div class="filters">
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search events or cities"
+            aria-label="Search events"
+          /><select id="categoryFilter" aria-label="Filter by category">
+            <option value="all">All categories</option>
+            <option>Music</option>
+            <option>Culture</option>
+            <option>Sport</option>
+            <option>Community</option></select
+          ><select id="cityFilter" aria-label="Filter by city">
+            <option value="all">All locations</option>
+            <option>Bujumbura</option>
+            <option>Gitega</option>
+            <option>Bururi</option>
+            <option>Ngozi</option>
+          </select>
+        </div>
+        <p class="sr-only" id="resultsStatus" aria-live="polite"></p>
+        <div class="event-list" id="eventGrid"></div>
+        <p class="empty-state" id="noResults" hidden>
+          No matching events. Try another search or filter.
+        </p>
+      </section>
+      <aside class="notice">
+        <strong>For the community, by the community.</strong
+        ><span
+          >Discover events across Burundi, plan your next outing, and share
+          something happening in your community.</span
+        >
+      </aside>
+    </main>
+    <footer>
+      Burundi Events <span>Find something happening near you.</span>
+    </footer>
+  </body>
+</html>

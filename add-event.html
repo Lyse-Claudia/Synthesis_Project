@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Add an event | Burundi Events</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <a class="logo" href="index.html">Burundi <span>Events</span></a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Discover</a
+        ><a href="add-event.html" class="active" aria-current="page" data-member-link hidden
+          >Add event</a
+        ><a href="tickets.html">My tickets</a><a href="account.html">Account</a>
+      </nav>
+    </header>
+    <main class="container narrow" id="main-content">
+      <a class="back-link" href="index.html">← Back to events</a>
+      <section class="page-heading">
+        <p class="eyebrow">SHARE WITH YOUR COMMUNITY</p>
+        <h1>Add an event</h1>
+        <p>Suggest an event for the Burundi Events listing.</p>
+      </section>
+      <section class="panel" id="addEventPanel">
+        <form class="booking-form" id="addEventForm">
+          <label for="newEventTitle">Event name</label
+          ><input
+            id="newEventTitle"
+            required
+            minlength="3"
+            placeholder="e.g. Community art day"
+          />
+          <label for="newEventCity">City</label
+          ><select id="newEventCity" required>
+            <option value="">Choose a city</option>
+            <option>Bujumbura</option>
+            <option>Gitega</option>
+            <option>Bururi</option>
+            <option>Ngozi</option>
+            <option>Other</option>
+          </select>
+          <label for="newEventVenue">Venue</label
+          ><input
+            id="newEventVenue"
+            required
+            placeholder="Where will it happen?"
+          />
+          <label for="newEventDate">Date</label
+          ><input id="newEventDate" type="date" required />
+          <label for="newEventCategory">Category</label
+          ><select id="newEventCategory" required>
+            <option value="">Choose a category</option>
+            <option>Music</option>
+            <option>Culture</option>
+            <option>Sport</option>
+            <option>Community</option>
+          </select>
+          <p class="field-title">Ticket types and prices</p>
+          <div id="ticketTypeList">
+            <div class="ticket-type-row">
+              <div>
+                <label class="sub-label" for="newTicketName1">Ticket name</label
+                ><input
+                  id="newTicketName1"
+                  class="new-ticket-name"
+                  required
+                  minlength="2"
+                  placeholder="e.g. Standard entry"
+                />
+              </div>
+              <div>
+                <label class="sub-label" for="newTicketPrice1">Price (BIF)</label
+                ><input
+                  id="newTicketPrice1"
+                  class="new-ticket-price"
+                  type="number"
+                  min="0"
+                  step="500"
+                  required
+                  placeholder="0"
+                />
+              </div>
+              <div>
+                <label class="sub-label" for="newTicketAvailable1">Available</label
+                ><input
+                  id="newTicketAvailable1"
+                  class="new-ticket-available"
+                  type="number"
+                  min="1"
+                  step="1"
+                  required
+                  placeholder="100"
+                />
+              </div>
+            </div>
+          </div>
+          <button class="text-button" id="addTicketType" type="button">
+            + Add another ticket type
+          </button>
+          <p class="muted small-note">
+            Add up to five options, such as Standard, VIP, or Student.
+          </p>
+          <p class="notice-small">
+            Event publishing is not connected yet. This listing will be saved in
+            this browser and will not be visible to other visitors.
+          </p>
+          <button class="button" type="submit">Add to event list</button>
+        </form>
+      </section>
+      <section class="panel account-status" id="eventAdded" role="status" aria-live="polite" hidden></section>
+    </main>
+    <footer>
+      Burundi Events <span>Share an event with your community.</span>
+    </footer>
+  </body>
+</html>

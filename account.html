@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your account | Burundi Events</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <a class="logo" href="index.html">Burundi <span>Events</span></a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Discover</a
+        ><a href="add-event.html" data-member-link hidden>Add event</a
+        ><a href="tickets.html">My tickets</a
+        ><a class="active" aria-current="page" href="account.html">Account</a>
+      </nav>
+    </header>
+    <main class="container narrow" id="main-content">
+      <section class="page-heading">
+        <p class="eyebrow">YOUR ACCOUNT</p>
+        <h1>Sign in</h1>
+        <p>Sign in to book tickets or manage event listings.</p>
+      </section>
+      <section class="panel" id="accountPanel">
+        <form class="booking-form" id="accountForm">
+          <label for="accountName">Your name</label
+          ><input
+            id="accountName"
+            required
+            minlength="2"
+            placeholder="Enter your name"
+          /><label for="accountEmail">Email address</label
+          ><input
+            id="accountEmail"
+            type="email"
+            required
+            placeholder="name@example.com"
+          /><label for="accountRole">Account type</label
+          ><select id="accountRole" required>
+            <option value="attendee">Attendee — find and book tickets</option>
+            <option value="admin">Event organizer — manage listings</option>
+          </select>
+          <button class="button" type="submit">Continue</button>
+        </form>
+      </section>
+      <section class="panel account-status" id="accountStatus" role="status" aria-live="polite" hidden></section>
+    </main>
+    <footer>Burundi Events <span>Your events, all in one place.</span></footer>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My tickets | Burundi Events</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <a class="logo" href="index.html">Burundi <span>Events</span></a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Discover</a
+        ><a href="add-event.html" data-member-link hidden>Add event</a
+        ><a class="active" aria-current="page" href="tickets.html">My tickets</a
+        ><a href="account.html">Account</a>
+      </nav>
+    </header>
+    <main class="container" id="main-content">
+      <section class="page-heading">
+        <p class="eyebrow">YOUR EVENT PLANS</p>
+        <h1>My tickets</h1>
+        <p>
+          Keep track of the events you’ve booked and the ones you’ve enjoyed.
+        </p>
+      </section>
+      <section class="panel sign-in-prompt" id="ticketSignIn" role="status" aria-live="polite" hidden>
+        <p>Sign in to see your bookings.</p>
+        <a class="button" href="account.html?next=tickets.html"
+          >Go to account</a
+        >
+      </section>
+      <section class="ticket-section" id="upcomingSection">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">COMING UP</p>
+            <h2>Upcoming events</h2>
+          </div>
+        </div>
+        <div class="ticket-list" id="upcomingTickets"></div>
+        <p class="empty-state" id="upcomingEmpty">
+          Your upcoming bookings will appear here.
+        </p>
+      </section>
+      <section class="ticket-section past-section" id="pastSection">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">YOUR MEMORIES</p>
+            <h2>Past events</h2>
+          </div>
+        </div>
+        <div class="ticket-list" id="pastTickets"></div>
+        <p class="empty-state" id="pastEmpty">
+          Events you’ve attended will appear here.
+        </p>
+      </section>
+      <a class="button secondary-button" id="discoverMore" href="index.html"
+        >Discover more events</a
+      >
+    </main>
+    <footer>Burundi Events <span>Your events, all in one place.</span></footer>
+  </body>
+</html>
